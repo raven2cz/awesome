@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Themelib gears.color - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -20,15 +21,8 @@
 <body>
 
 <div id="container">
-
-<div id="product">
-    <div id="product_logo"></div>
-    <div id="product_name"><big><b></b></big></div>
-    <div id="product_description"></div>
-</div> <!-- id="product" -->
-
-
 <div id="main">
+
 
 
 
@@ -36,8 +30,17 @@
 <!-- Menu -->
 
 <div id="navigation">
-<br/>
 <h1>awesome</h1>
+
+<div class="select">
+    <select name="theme" id="theme-select">
+       <option selected disabled>Choose a theme</option>
+       <option value="light">LDoc Light</option>
+       <option value="dark">Awesome Dark</option>
+       <option value="monokai">Monokai</option>
+       <option value="onedark">One Dark</option>
+    </select>
+ </div>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -197,8 +200,6 @@
   <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
   <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
   <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
-  <li><a href="../classes/signals.html">signals</a></li>
-  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
   <li><a href="../classes/wibox.hierarchy.html">wibox.hierarchy</a></li>
   <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
   <li><a href="../classes/xproperties.html">xproperties</a></li>
@@ -246,11 +247,12 @@
 <span class="string">"radial:50,50,10:55,55,30:0,#ff0000:0.5,#00ff00:1,#0000ff"</span>
 </pre>
 
+
 <p> The above will call <a href="../theme_related_libraries/gears.color.html#create_radial_pattern">create_radial_pattern</a> with the provided string, after
  stripping the <code>radial:</code> prefix.</p>
 
 <p> Alternatively, patterns can be specified via tables. In this case, the
- table's 'type' member specifies the type. For example:</p>
+ table&rsquo;s &lsquo;type&rsquo; member specifies the type. For example:</p>
 
 <pre>
 {
@@ -260,6 +262,7 @@
   stops = { { <span class="number">0</span>, <span class="string">"#ff0000"</span> }, { <span class="number">0.5</span>, <span class="string">"#00ff00"</span> }, { <span class="number">1</span>, <span class="string">"#0000ff"</span> } }
 }
 </pre>
+
 
 <p> Any argument that cannot be understood is passed to <a href="../theme_related_libraries/gears.color.html#create_solid_pattern">create_solid_pattern</a>.</p>
 
@@ -290,115 +293,161 @@
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
 <table class="function_list">
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#parse_color"><span class='function_modname'>gears.color.</span>parse_color <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, number, number, number, nil)</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Parse a HTML-color.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_solid_pattern"><span class='function_modname'>gears.color.</span>create_solid_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create a solid pattern
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_png_pattern"><span class='function_modname'>gears.color.</span>create_png_pattern <span class='function_args'> <b>(</b>file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create an image pattern from a png file
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_linear_pattern"><span class='function_modname'>gears.color.</span>create_linear_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create a linear pattern object.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_radial_pattern"><span class='function_modname'>gears.color.</span>create_radial_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create a radial pattern object.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_pattern_uncached"><span class='function_modname'>gears.color.</span>create_pattern_uncached <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create a pattern from a given string.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_pattern"><span class='function_modname'>gears.color.</span>create_pattern <span class='function_args'> <b>(</b><b>)</b></span></a>
-        <span class="summarytype"></span>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;gears.color</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Create a pattern from a given string, same as <a href="../theme_related_libraries/gears.color.html#">gears.color</a>.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#create_opaque_pattern"><span class='function_modname'>gears.color.</span>create_opaque_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Check if a pattern is opaque.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#recolor_image"><span class='function_modname'>gears.color.</span>recolor_image <span class='function_args'> <b>(</b>image, new_color<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Fill non-transparent area of an image with a given color.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
+      <td class="name" >
+        <a href="#change_opacity"><span class='function_modname'>gears.color.</span>change_opacity <span class='function_args'> <b>(</b>input, opacity<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;color</span></span>
+      </td>
+      <td class="summary">
+        Take an input color and set a different opacity.
+      </td>
+      <td class="baseclass" nowrap>
+      </td>
+    </tr>
+    <tr class="summary_row">
+      <td class="name" >
+        <a href="#to_rgba_string"><span class='function_modname'>gears.color.</span>to_rgba_string <span class='function_args'> <b>(</b>color, <span class="optional_param">fallback</span><b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+      </td>
+      <td class="summary">
+        Convert a color back to an hexadecimal color code.
+      </td>
+      <td class="baseclass" nowrap>
+      </td>
+    </tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#ensure_pango_color"><span class='function_modname'>gears.color.</span>ensure_pango_color <span class='function_args'> <b>(</b>check_color, fallback<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Get a valid color for Pango markup
+      </td>
+      <td class="baseclass" nowrap>
       </td>
     </tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#color.types">color.types</a>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Mapping of all supported color types.
+      </td>
+      <td class="baseclass" nowrap>
       </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
 <table class="function_list">
-    <tr>
+    <tr class="summary_row">
       <td class="shortname" ><a href="#color.transparent"><span class='function_modname'>gears.color.</span>color.transparent</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         No color
+      </td>
+      <td class="baseclass" nowrap>
       </td>
     </tr>
 </table>
@@ -411,7 +460,7 @@
 
     <dl class="function">
     <dt>
-    <a name = "parse_color"></a>
+    <a class="copy-link js-copy-link" name="parse_color" href="#parse_color">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>parse_color <span class='function_args'> <b>(</b>col<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;(number, number, number, number, nil)</span></span>
     <span class="baseclass" >
@@ -423,26 +472,35 @@
  Max 4 chars per channel.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">col</span>
-         The color to parse
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">col</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The color to parse</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
         <li>
            <span class="types"><span class="type">number</span></span>
-        between 0 and 1 for the 'red' value (1st channel)</li>
+        between 0 and 1 for the &lsquo;red&rsquo; value (1st channel)</li>
         <li>
            <span class="types"><span class="type">number</span></span>
-        between 0 and 1 for the 'green' value (2nd channel)</li>
+        between 0 and 1 for the &lsquo;green&rsquo; value (2nd channel)</li>
         <li>
            <span class="types"><span class="type">number</span></span>
-        between 0 and 1 for the 'blue' value (3rd channel)</li>
+        between 0 and 1 for the &lsquo;blue&rsquo; value (3rd channel)</li>
         <li>
            <span class="types"><span class="type">number</span></span>
-         between 0 and 1 for the 'opacity' value (4th channel)
+         between 0 and 1 for the &lsquo;opacity&rsquo; value (4th channel)
  if the incoming color code only has 3 values (only rgb, not opacity) the 4th
  return value is 1.</li>
         <li>
@@ -460,12 +518,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     </ul>
 
 
-    <span id=item2211 class="hide_extra">
+    <span id=item1061 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_solid_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_solid_pattern" href="#create_solid_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_solid_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -475,11 +533,20 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Create a solid pattern
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">col</span>
-         The color for the pattern
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">col</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The color for the pattern</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -491,12 +558,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2212 class="hide_extra">
+    <span id=item1062 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_png_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_png_pattern" href="#create_png_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_png_pattern <span class='function_args'> <b>(</b>file<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -506,11 +573,20 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Create an image pattern from a png file
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">file</span>
-         The filename of the file
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">file</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The filename of the file</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -522,12 +598,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2213 class="hide_extra">
+    <span id=item1063 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_linear_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_linear_pattern" href="#create_linear_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_linear_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -537,20 +613,27 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Create a linear pattern object.
  The pattern is created from a string. This string should have the following
  form: <code>&quot;x0, y0:x1, y1:&lt;stops&gt;&quot;</code>
- Alternatively, the pattern can be specified as a table:</p>
-<pre><code>{ type = "linear", from = { x0, y0 }, to = { x1, y1 },
-  stops = { &lt;stops&gt; } }
-</code></pre>
-<p> <code>x0,y0</code> and <code>x1,y1</code> are the start and stop point of the pattern.
+ Alternatively, the pattern can be specified as a table:
+    { type = &ldquo;linear&rdquo;, from = { x0, y0 }, to = { x1, y1 },
+      stops = { <stops> } }
+ <code>x0,y0</code> and <code>x1,y1</code> are the start and stop point of the pattern.
  For the explanation of <code>&lt;stops&gt;</code>, see <code>color.create_pattern</code>.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">arg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The argument describing the pattern.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">arg</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span></td>
+           <td class="see_also_description"> The argument describing the pattern.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -562,12 +645,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2214 class="hide_extra">
+    <span id=item1064 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_radial_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_radial_pattern" href="#create_radial_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_radial_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -577,21 +660,28 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Create a radial pattern object.
  The pattern is created from a string. This string should have the following
  form: <code>&quot;x0, y0, r0:x1, y1, r1:&lt;stops&gt;&quot;</code>
- Alternatively, the pattern can be specified as a table:</p>
-<pre><code>{ type = "radial", from = { x0, y0, r0 }, to = { x1, y1, r1 },
-  stops = { &lt;stops&gt; } }
-</code></pre>
-<p> <code>x0,y0</code> and <code>x1,y1</code> are the start and stop point of the pattern.
+ Alternatively, the pattern can be specified as a table:
+    { type = &ldquo;radial&rdquo;, from = { x0, y0, r0 }, to = { x1, y1, r1 },
+      stops = { <stops> } }
+ <code>x0,y0</code> and <code>x1,y1</code> are the start and stop point of the pattern.
  <code>r0</code> and <code>r1</code> are the radii of the start / stop circle.
  For the explanation of <code>&lt;stops&gt;</code>, see <code>color.create_pattern</code>.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">arg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         The argument describing the pattern
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">arg</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span></td>
+           <td class="see_also_description"> The argument describing the pattern</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -603,12 +693,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2215 class="hide_extra">
+    <span id=item1065 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_pattern_uncached"></a>
+    <a class="copy-link js-copy-link" name="create_pattern_uncached" href="#create_pattern_uncached">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_pattern_uncached <span class='function_args'> <b>(</b>col<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -623,11 +713,20 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
  returned object.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">col</span>
-         The string describing the pattern.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">col</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The string describing the pattern.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -637,20 +736,26 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
     <h3>See also:</h3>
-    <ul>
-         <a href="../theme_related_libraries/gears.color.html#create_pattern">create_pattern</a>
-    </ul>
+    <table class="see_also">
+     <tr>
+         <td><a href="../theme_related_libraries/gears.color.html#create_pattern" title="In the gears.color module.">create_pattern</a></td>
+         <td>Create a pattern from a given string, same as <a href="../theme_related_libraries/gears.color.html#">gears.color</a>. </td>
+         <td>
+             <span class="chips">static module functions</span>
+         </td>
+     <tr>
+    </table>
 
 
 
-    <span id=item2216 class="hide_extra">
+    <span id=item1066 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_pattern" href="#create_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_pattern <span class='function_args'> <b>(</b><b>)</b></span></strong>
-    <span class="proptype"></span>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;gears.color</span></span>
     <span class="baseclass" >
     </span>
     </dt>
@@ -658,21 +763,33 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Create a pattern from a given string, same as <a href="../theme_related_libraries/gears.color.html#">gears.color</a>.
 
 
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">gears.color</span></span>
+        A cairo pattern object.
+    </ol>
 
 
     <h3>See also:</h3>
-    <ul>
-         <a href="../theme_related_libraries/gears.color.html#">gears.color</a>
-    </ul>
+    <table class="see_also">
+     <tr>
+         <td><a href="../theme_related_libraries/gears.color.html#" title="In the gears.color module.">gears.color</a></td>
+         <td>This module simplifies the creation of cairo pattern objects. </td>
+         <td>
+             <span class="chips">module</span>
+         </td>
+     <tr>
+    </table>
 
 
 
-    <span id=item2217 class="hide_extra">
+    <span id=item1067 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "create_opaque_pattern"></a>
+    <a class="copy-link js-copy-link" name="create_opaque_pattern" href="#create_opaque_pattern">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>create_opaque_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -681,14 +798,23 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     <dd>
     Check if a pattern is opaque.
  A pattern is transparent if the background on which it gets drawn (with
- operator OVER) doesn't influence the visual result.
+ operator OVER) doesn&rsquo;t influence the visual result.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">col</span>
-         An argument that <a href="../theme_related_libraries/gears.color.html#create_pattern">create_pattern</a> accepts.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">col</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> An argument that <a href="../theme_related_libraries/gears.color.html#create_pattern">create_pattern</a> accepts.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -700,12 +826,12 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2218 class="hide_extra">
+    <span id=item1068 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "recolor_image"></a>
+    <a class="copy-link js-copy-link" name="recolor_image" href="#recolor_image">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>recolor_image <span class='function_args'> <b>(</b>image, new_color<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -715,14 +841,26 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Fill non-transparent area of an image with a given color.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">image</span>
-         Image or path to it.
-        </li>
-        <li><span class="parameter">new_color</span>
-         New color.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">image</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> Image or path to it.</td>
+         </tr>
+         <tr>
+           <td><span class="parameter">new_color</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> New color.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -734,12 +872,125 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2219 class="hide_extra">
+    <span id=item1069 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "ensure_pango_color"></a>
+    <a class="copy-link js-copy-link" name="change_opacity" href="#change_opacity">&#128279;</a>
+    <strong><span class='function_modname'>gears.color.</span>change_opacity <span class='function_args'> <b>(</b>input, opacity<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;color</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Take an input color and set a different opacity.
+
+    <h3>Parameters:</h3>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">input</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">pattern</span></span></td>
+           <td class="see_also_description"> The input color.</td>
+         </tr>
+         <tr>
+           <td><span class="parameter">opacity</span></td>
+           <td></td>
+           <td><span class="types"><span class="type">number</span></span></td>
+           <td class="see_also_description"> A floating point number between 0 and 1.</td>
+         </tr>
+        </table>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">color</span></span>
+        The new color if successful or <code>input</code> if invalid.
+    </ol>
+
+
+
+
+
+    <span id=item1070 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a class="copy-link js-copy-link" name="to_rgba_string" href="#to_rgba_string">&#128279;</a>
+    <strong><span class='function_modname'>gears.color.</span>to_rgba_string <span class='function_args'> <b>(</b>color, <span class="optional_param">fallback</span><b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Convert a color back to an hexadecimal color code.</p>
+
+<p> This takes an input color, pattern or gradient and attempt to convert it
+ to a color. If this fails, <code>fallback</code> is returned. This is useful when a
+ color needs to be concatenated into a Pango markup string.
+
+    <h3>Parameters:</h3>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+            <th>Default value</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">color</span></td>
+           <td></td>
+           <td><span class="types"><span class="type">pattern</span>, <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">gradient</span></span></td>
+           <td class="see_also_description"> Note that only solid colors can be
+  convedted to the <code>RGBA</code> format.</td>
+           <td><span class="not_applicable" title="This parameter is mandatory">Not applicable</span></td>
+         </tr>
+         <tr>
+           <td><span class="parameter">fallback</span></td>
+           <td><span class="chips">Optional</span></td>
+           <td><span class="types"><span class="type">pattern</span>, <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">gradient</span></span></td>
+           <td class="see_also_description"> The color to return
+  if <code>color</code> cannot be converted to a string.</td>
+           <td><span class="default_value"><code>nil</code></span></td>
+         </tr>
+        </table>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        The color in <code>#rrggbbaa</code> format.
+    </ol>
+
+
+    <h3>See also:</h3>
+    <table class="see_also">
+     <tr>
+         <td><a href="../theme_related_libraries/gears.color.html#ensure_pango_color" title="In the gears.color module.">gears.color.ensure_pango_color</a></td>
+         <td>Get a valid color for Pango markup </td>
+         <td>
+             <span class="chips">static module functions</span>
+         </td>
+     <tr>
+    </table>
+
+
+
+    <span id=item1071 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a class="copy-link js-copy-link" name="ensure_pango_color" href="#ensure_pango_color">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>ensure_pango_color <span class='function_args'> <b>(</b>check_color, fallback<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
     <span class="baseclass" >
@@ -749,20 +1000,31 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Get a valid color for Pango markup
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">check_color</span>
-         The color to check.
-        </li>
-        <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The color to return if the first is invalid. (default: black)
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">check_color</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The color to check.</td>
+         </tr>
+         <tr>
+           <td><span class="parameter">fallback</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span></td>
+           <td class="see_also_description"> The color to return if the first is invalid. (default: black)</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
         color if it is valid, else fallback.
     </ol>
 
@@ -770,7 +1032,7 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2220 class="hide_extra">
+    <span id=item1072 class="hide_extra">
     </span>
 
 </dd>
@@ -779,7 +1041,7 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
     <dl class="function">
     <dt>
-    <a name = "color.types"></a>
+    <a class="copy-link js-copy-link" name="color.types" href="#color.types">&#128279;</a>
     <strong>color.types</strong>
     <span class="baseclass" >
     </span>
@@ -788,35 +1050,45 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     Mapping of all supported color types.  New entries can be added.
 
     <h3>Fields:</h3>
-    <ul>
-        <li><span class="parameter">solid</span>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">solid</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"></td>
+         </tr>
+         <tr>
+           <td><span class="parameter">png</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"></td>
+         </tr>
+         <tr>
+           <td><span class="parameter">linear</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"></td>
+         </tr>
+         <tr>
+           <td><span class="parameter">radial</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"></td>
+         </tr>
+        </table>
 
 
 
-        </li>
-        <li><span class="parameter">png</span>
 
 
 
-        </li>
-        <li><span class="parameter">linear</span>
-
-
-
-        </li>
-        <li><span class="parameter">radial</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2221 class="hide_extra">
+    <span id=item1073 class="hide_extra">
     </span>
 
 </dd>
@@ -825,7 +1097,7 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
     <dl class="function">
     <dt>
-    <a name = "color.transparent"></a>
+    <a class="copy-link js-copy-link" name="color.transparent" href="#color.transparent">&#128279;</a>
     <strong><span class='function_modname'>gears.color.</span>color.transparent</strong>
     <span class="proptype"><span class='summary_type'>N/A</span></span>
     <span class="baseclass" >
@@ -840,7 +1112,7 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 
 
 
-    <span id=item2222 class="hide_extra">
+    <span id=item1074 class="hide_extra">
     </span>
 
 </dd>
@@ -853,5 +1125,93 @@ gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
+
+<script defer type="text/javascript">
+    // Theme selection and its local storage
+    var select = document.getElementById("theme-select");
+
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+        select.value = storedTheme;
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    }
+
+    select.addEventListener("change", function() {
+        var targetTheme = this.value;
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.setItem('theme', targetTheme);
+    });
+
+    const $nav = document.querySelector("#navigation");
+
+    // When clicking the sidebar, open it
+    $nav.addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768) {
+            return;
+        }
+
+        const target = $nav;
+        if (!target.classList.contains("open")) {
+            target.classList.add("open");
+            ev.stopPropagation();
+        }
+    });
+
+    // When clicking anywhere else than the sidebar, close it
+    document.querySelector("body").addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768 || ev.target.contains($nav)) {
+            return;
+        }
+
+        const target = $nav;
+        if (target.classList.contains("open")) {
+            target.classList.remove("open");
+        }
+    });
+
+    const copyResultClasses = {
+        success : "copy-link--success",
+        failure: "copy-link--failure"
+    };
+
+    const removeCopyResultClasses = ($target) =>
+        Object.values(copyResultClasses).forEach(c => $target.classList.remove(c));
+
+    document.querySelectorAll(".js-copy-link").forEach(copyLink => {
+        copyLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            const $target = e.target;
+
+            removeCopyResultClasses($target);
+
+            let link = $target.href;
+            if (!link) {
+                return;
+            }
+            if (link.startsWith("#")) {
+                const curr = window.location.pathname;
+                link = curr.substring(0, curr.indexOf("#")) + link;
+            }
+
+            // We need to create a fake element to copy the text from
+            const fakeElement = document.createElement("textarea");
+            fakeElement.value = link;
+            document.body.appendChild(fakeElement);
+            fakeElement.select();
+
+            let success = false;
+            try {
+                success = document.execCommand("copy");
+            } catch(err) {
+                success = false;
+            }
+
+            fakeElement.remove();
+            $target.classList.add(success ? copyResultClasses.success : copyResultClasses.failure);
+            setInterval(() => removeCopyResultClasses($target), 1500);
+        });
+    });
+</script>
+
 </body>
 </html>

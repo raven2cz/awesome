@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Module menubar.utils - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -20,15 +21,8 @@
 <body>
 
 <div id="container">
-
-<div id="product">
-    <div id="product_logo"></div>
-    <div id="product_name"><big><b></b></big></div>
-    <div id="product_description"></div>
-</div> <!-- id="product" -->
-
-
 <div id="main">
+
 
 
 
@@ -36,8 +30,17 @@
 <!-- Menu -->
 
 <div id="navigation">
-<br/>
 <h1>awesome</h1>
+
+<div class="select">
+    <select name="theme" id="theme-select">
+       <option selected disabled>Choose a theme</option>
+       <option value="light">LDoc Light</option>
+       <option value="dark">Awesome Dark</option>
+       <option value="monokai">Monokai</option>
+       <option value="onedark">One Dark</option>
+    </select>
+ </div>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -196,8 +199,6 @@
   <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
   <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
   <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
-  <li><a href="../classes/signals.html">signals</a></li>
-  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
   <li><a href="../classes/wibox.hierarchy.html">wibox.hierarchy</a></li>
   <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
   <li><a href="../classes/xproperties.html">xproperties</a></li>
@@ -226,10 +227,8 @@
 <div id="content">
 
 <h1>Module: <code>menubar.utils</code></h1>
-<p>Utility module for menubar</p>
-<p>
-
-</p>
+<p>Utility functions for the <a href="../popups_and_bars/menubar.html#">menubar</a> module.</p>
+<p></p>
     <div class="extra-header">
 
 
@@ -253,66 +252,80 @@
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
 <table class="function_list">
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#menubar.utils.rtrim"><span class='function_modname'>menubar.utils.</span>rtrim <span class='function_args'> <b>(</b>s<b>)</b></span></a>
-        <span class="summarytype"></span>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Remove CR newline from the end of the string.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#menubar.utils.lookup_icon_uncached"><span class='function_modname'>menubar.utils.</span>lookup_icon_uncached <span class='function_args'> <b>(</b>icon_file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string <i>or</i> boolean</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Lookup an icon in different folders of the filesystem.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#menubar.utils.lookup_icon"><span class='function_modname'>menubar.utils.</span>lookup_icon <span class='function_args'> <b>(</b>icon<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Lookup an icon in different folders of the filesystem (cached).
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#menubar.utils.parse_desktop_file"><span class='function_modname'>menubar.utils.</span>parse_desktop_file <span class='function_args'> <b>(</b>file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Parse a .desktop file.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="name" >
         <a href="#menubar.utils.parse_dir"><span class='function_modname'>menubar.utils.</span>parse_dir <span class='function_args'> <b>(</b>dir_path, callback<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Parse a directory with .desktop files recursively.
+      </td>
+      <td class="baseclass" nowrap>
       </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
 <table class="function_list">
-    <tr>
+    <tr class="summary_row">
       <td class="shortname" ><a href="#terminal"><span class='function_modname'>menubar.utils.</span>terminal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Terminal which applications that need terminal would open in.
       </td>
+      <td class="baseclass" nowrap>
+      </td>
     </tr>
-    <tr>
+    <tr class="summary_row">
       <td class="shortname" ><a href="#wm_name"><span class='function_modname'>menubar.utils.</span>wm_name</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">
+      <td class="summary">
         Name of the WM for the OnlyShowIn entry in the .desktop file.
+      </td>
+      <td class="baseclass" nowrap>
       </td>
     </tr>
 </table>
@@ -325,9 +338,9 @@
 
     <dl class="function">
     <dt>
-    <a name = "menubar.utils.rtrim"></a>
+    <a class="copy-link js-copy-link" name="menubar.utils.rtrim" href="#menubar.utils.rtrim">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>rtrim <span class='function_args'> <b>(</b>s<b>)</b></span></strong>
-    <span class="proptype"></span>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
     <span class="baseclass" >
     </span>
     </dt>
@@ -335,23 +348,38 @@
     Remove CR newline from the end of the string.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">s</span>
-         string to trim
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">s</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span></td>
+           <td class="see_also_description"> The string to trim</td>
+         </tr>
+        </table>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        The trimmed string.
+    </ol>
 
 
 
 
 
-
-    <span id=item2453 class="hide_extra">
+    <span id=item1284 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "menubar.utils.lookup_icon_uncached"></a>
+    <a class="copy-link js-copy-link" name="menubar.utils.lookup_icon_uncached" href="#menubar.utils.lookup_icon_uncached">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>lookup_icon_uncached <span class='function_args'> <b>(</b>icon_file<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;string <i>or</i> boolean</span></span>
     <span class="baseclass" >
@@ -361,17 +389,25 @@
     Lookup an icon in different folders of the filesystem.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">icon_file</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Short or full name of the icon.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">icon_file</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span></td>
+           <td class="see_also_description"> Short or full name of the icon.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">boolean</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">boolean</span></span>
         Full name of the icon, or false on failure.
     </ol>
 
@@ -379,12 +415,12 @@
 
 
 
-    <span id=item2454 class="hide_extra">
+    <span id=item1285 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "menubar.utils.lookup_icon"></a>
+    <a class="copy-link js-copy-link" name="menubar.utils.lookup_icon" href="#menubar.utils.lookup_icon">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>lookup_icon <span class='function_args'> <b>(</b>icon<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -394,11 +430,20 @@
     Lookup an icon in different folders of the filesystem (cached).
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">icon</span>
-         Short or full name of the icon.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">icon</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> Short or full name of the icon.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -410,12 +455,12 @@
 
 
 
-    <span id=item2455 class="hide_extra">
+    <span id=item1286 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "menubar.utils.parse_desktop_file"></a>
+    <a class="copy-link js-copy-link" name="menubar.utils.parse_desktop_file" href="#menubar.utils.parse_desktop_file">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>parse_desktop_file <span class='function_args'> <b>(</b>file<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
     <span class="baseclass" >
@@ -425,11 +470,20 @@
     Parse a .desktop file.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">file</span>
-         The .desktop file.
-        </li>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">file</span></td>
+           <td></td>
+           <td><span class="types"></span></td>
+           <td class="see_also_description"> The .desktop file.</td>
+         </tr>
+        </table>
 
     <h3>Returns:</h3>
     <ol>
@@ -441,12 +495,12 @@
 
 
 
-    <span id=item2456 class="hide_extra">
+    <span id=item1287 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "menubar.utils.parse_dir"></a>
+    <a class="copy-link js-copy-link" name="menubar.utils.parse_dir" href="#menubar.utils.parse_dir">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>parse_dir <span class='function_args'> <b>(</b>dir_path, callback<b>)</b></span></strong>
     <span class="proptype"></span>
     <span class="baseclass" >
@@ -456,27 +510,40 @@
     Parse a directory with .desktop files recursively.
 
     <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">dir_path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The directory path.
-        </li>
-        <li><span class="parameter">callback</span> Will be fired when all the files were parsed
- with the resulting list of menu entries as argument.
-        <ul>
-        <li><span class="parameter">programs</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         Paths of found .desktop files.
-        </li>
-        </li></ul>
-    </ul>
+    <table class="see_also">
+         <tr class="param_header">
+            <th>Name</th>
+            <th></th>
+            <th>Type(s)</th>
+            <th>Description</th>
+         </tr>
+         <tr>
+           <td><span class="parameter">dir_path</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span></td>
+           <td class="see_also_description"> The directory path.</td>
+         </tr>
+        <tr>
+           <td><span class="parameter">callback</span></td>
+           <td></td>
+           <td><span class="types"><span class="type">table</span></span></td>
+           <td class="see_also_description"> Will be fired when all the files were parsed
+ with the resulting list of menu entries as argument. </td>
+         </tr>
+         <tr class="see_also_sublist">
+           <td><span class="parameter">programs</span></td>
+           <td></td>
+           <td><span class="types"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span></td>
+           <td class="see_also_description"> Paths of found .desktop files.</td>
+         </tr>
+        </table>
 
 
 
 
 
 
-    <span id=item2457 class="hide_extra">
+    <span id=item1288 class="hide_extra">
     </span>
 
 </dd>
@@ -485,7 +552,7 @@
 
     <dl class="function">
     <dt>
-    <a name = "terminal"></a>
+    <a class="copy-link js-copy-link" name="terminal" href="#terminal">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>terminal</strong>
     <span class="proptype"><span class='summary_type'>string</span></span>
     <span class="baseclass" >
@@ -500,12 +567,12 @@
 
 
 
-    <span id=item2458 class="hide_extra">
+    <span id=item1289 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "wm_name"></a>
+    <a class="copy-link js-copy-link" name="wm_name" href="#wm_name">&#128279;</a>
     <strong><span class='function_modname'>menubar.utils.</span>wm_name</strong>
     <span class="proptype"><span class='summary_type'>string</span></span>
     <span class="baseclass" >
@@ -520,7 +587,7 @@
 
 
 
-    <span id=item2459 class="hide_extra">
+    <span id=item1290 class="hide_extra">
     </span>
 
 </dd>
@@ -533,5 +600,93 @@
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
+
+<script defer type="text/javascript">
+    // Theme selection and its local storage
+    var select = document.getElementById("theme-select");
+
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+        select.value = storedTheme;
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    }
+
+    select.addEventListener("change", function() {
+        var targetTheme = this.value;
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.setItem('theme', targetTheme);
+    });
+
+    const $nav = document.querySelector("#navigation");
+
+    // When clicking the sidebar, open it
+    $nav.addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768) {
+            return;
+        }
+
+        const target = $nav;
+        if (!target.classList.contains("open")) {
+            target.classList.add("open");
+            ev.stopPropagation();
+        }
+    });
+
+    // When clicking anywhere else than the sidebar, close it
+    document.querySelector("body").addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768 || ev.target.contains($nav)) {
+            return;
+        }
+
+        const target = $nav;
+        if (target.classList.contains("open")) {
+            target.classList.remove("open");
+        }
+    });
+
+    const copyResultClasses = {
+        success : "copy-link--success",
+        failure: "copy-link--failure"
+    };
+
+    const removeCopyResultClasses = ($target) =>
+        Object.values(copyResultClasses).forEach(c => $target.classList.remove(c));
+
+    document.querySelectorAll(".js-copy-link").forEach(copyLink => {
+        copyLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            const $target = e.target;
+
+            removeCopyResultClasses($target);
+
+            let link = $target.href;
+            if (!link) {
+                return;
+            }
+            if (link.startsWith("#")) {
+                const curr = window.location.pathname;
+                link = curr.substring(0, curr.indexOf("#")) + link;
+            }
+
+            // We need to create a fake element to copy the text from
+            const fakeElement = document.createElement("textarea");
+            fakeElement.value = link;
+            document.body.appendChild(fakeElement);
+            fakeElement.select();
+
+            let success = false;
+            try {
+                success = document.execCommand("copy");
+            } catch(err) {
+                success = false;
+            }
+
+            fakeElement.remove();
+            $target.classList.add(success ? copyResultClasses.success : copyResultClasses.failure);
+            setInterval(() => removeCopyResultClasses($target), 1500);
+        });
+    });
+</script>
+
 </body>
 </html>

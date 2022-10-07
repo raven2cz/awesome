@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Topic 09-options.md - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -20,15 +21,8 @@
 <body>
 
 <div id="container">
-
-<div id="product">
-    <div id="product_logo"></div>
-    <div id="product_name"><big><b></b></big></div>
-    <div id="product_description"></div>
-</div> <!-- id="product" -->
-
-
 <div id="main">
+
 
 
 
@@ -36,8 +30,17 @@
 <!-- Menu -->
 
 <div id="navigation">
-<br/>
 <h1>awesome</h1>
+
+<div class="select">
+    <select name="theme" id="theme-select">
+       <option selected disabled>Choose a theme</option>
+       <option value="light">LDoc Light</option>
+       <option value="dark">Awesome Dark</option>
+       <option value="monokai">Monokai</option>
+       <option value="onedark">One Dark</option>
+    </select>
+ </div>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -216,8 +219,6 @@
   <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
   <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
   <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
-  <li><a href="../classes/signals.html">signals</a></li>
-  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
   <li><a href="../classes/wibox.hierarchy.html">wibox.hierarchy</a></li>
   <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
   <li><a href="../classes/xproperties.html">xproperties</a></li>
@@ -227,17 +228,16 @@
 
 <div id="content">
 
-
-<h1>Startup options</h1>
+    <h1>Startup options</h1>
 
 <p>This document explains how to control how AwesomeWM behaves before <a href="../sample files/rc.lua.html#">rc.lua</a> is
 executed.</p>
 
 <p><a name="Command_line"></a></p>
+
 <h2>Command line</h2>
 
 <p>AwesomeWM has the following command line options:</p>
-
 
 <pre>
 Usage: awesome [OPTION]
@@ -253,14 +253,15 @@ Usage: awesome [OPTION]
 </span>  -r, <span class="comment">--replace          replace an existing window manager</span>
 </pre>
 
+
 <p><a name="Modelines"></a></p>
+
 <h2>Modelines</h2>
 
 <p>Usually, AwesomeWM is started using a session manager rather than directly using
 the command line. On top of that, to make <a href="../sample files/rc.lua.html#">rc.lua</a> more portable, it is possible
 to set many of those options directly in your config file. They will be
 interpreted before the Lua virtual machine is started. The keys are:</p>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -278,30 +279,30 @@ interpreted before the Lua virtual machine is started. The keys are:</p>
 </table>
 
 
-<p>A <code>modeline</code> must be near the top of <a href="../sample files/rc.lua.html#">rc.lua</a> and start with <code>-- awesome_mode:</code>.
+<p>A <code>modeline</code> must be near the top of <a href="../sample files/rc.lua.html#">rc.lua</a> and start with <code>&ndash; awesome_mode:</code>.
 The options are separated by <code>:</code>. If an option has a value, it is separated by
 <code>=</code>. The default modeline is:</p>
-
 
 <pre>
 <span class="comment">-- awesome_mode: api-level=4:screen=on</span>
 </pre>
 
-<p>To display more deprecation errors, you can increase the API level by 2:</p>
 
+<p>To display more deprecation errors, you can increase the API level by 2:</p>
 
 <pre>
 <span class="comment">-- awesome_mode: api-level=6:screen=on</span>
 </pre>
 
+
 <p><a name="____shebang__support_"></a></p>
+
 <h2>#! (shebang) support.</h2>
 
 <p>It is possible to make some <code>.lua</code> file executable and use the POSIX magic
 prefix (<code>#!</code>, often referred as the shebang operator). AwesomeWM will attempt
 to parse the header. Note that for now UTF-8 paths are not supported. A typical
 file header will look like:</p>
-
 
 <pre>
 #! /usr/bin/env awesome <span class="comment">--replace
@@ -314,13 +315,14 @@ file header will look like:</p>
 [... more <span class="backtick"><a href="../sample files/rc.lua.html#">rc.lua</a></span> content ...]
 </pre>
 
+
 <p>Then you can make the script executable with <code>chmod +x</code> and run it.</p>
 
 <p><a name="Options_description"></a></p>
+
 <h2>Options description</h2>
 
 <h3>version (-v)</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -337,7 +339,6 @@ file header will look like:</p>
 
 <p>The typical output will look like:</p>
 
-
 <pre>
 awesome v4.<span class="number">3</span> (Too long)
   • Compiled against Lua <span class="number">5.1</span>.<span class="number">5</span> (running with Lua <span class="number">5.1</span>)
@@ -351,10 +352,10 @@ awesome v4.<span class="number">3</span> (Too long)
   • Custom search paths: no
 </pre>
 
+
 <p>The content is useful when reporting a bug.</p>
 
 <h3>config (-c): Alternate config path.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -371,11 +372,10 @@ awesome v4.<span class="number">3</span> (Too long)
 
 <p>This option allows to pass an arbitrary Lua file to be used as a config rather
 than <code>~/.config/awesome/rc.lua</code> or <code>/etc/xdg/awesome/rc.lua</code>. It makes zero
-sense in the shebang since you invoke a script directly. It doesn't make sense
+sense in the shebang since you invoke a script directly. It doesn&rsquo;t make sense
 in the modeline either since at that point the file is already being read.</p>
 
 <h3>force (-f): Use the command line arguments even when the modeline disagree.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -390,14 +390,13 @@ in the modeline either since at that point the file is already being read.</p>
 </table>
 
 
-<p>Usually, modeslines have the final say of which options to enable. This allows
+<p>Usually, modelines have the final say of which options to enable. This allows
 <a href="../sample files/rc.lua.html#">rc.lua</a> to be portable between computers without have to modify <code>~/.xinitrc</code>
 or your session files. However, sometime, it is useful to override these
 parameters. The most common use case is the to bump the API level to see more
 deprecation warnings.</p>
 
 <h3>search (-s): Add directories to the Lua search paths.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -422,7 +421,6 @@ useful for development.</p>
 
 <h3>check (-k): Check the config <strong>SYNTAX</strong>.</h3>
 
-
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
   <th align='center'>Command line</th>
@@ -437,12 +435,11 @@ useful for development.</p>
 
 
 <p>This option only check if the file is a valid Lua script. It will not check if
-your custom logic makes sense. Even when this options says your config is fine,
+your custom logic makes sense. Even when this option says your config is fine,
 it does <strong>NOT</strong> mean it can load properly. It only means it can be parsed and
 the interpreter can attempt to execute it.</p>
 
 <h3>no-argb (-a): Mitigate buggy graphics drivers.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -458,15 +455,14 @@ the interpreter can attempt to execute it.</p>
 </table>
 
 
-<p>This options disable the built-in real transparency support. This means
-titlebars and wiboxes can no longer be made fully transparent. If you don't
+<p>This option disables the built-in real transparency support. This means
+titlebars and wiboxes can no longer be made fully transparent. If you don&rsquo;t
 use a compositing manager such as <code>compton</code> or <code>picom</code>, this will only improve
 reliability and portability. Transparency is enabled by default and this should
 only be used when your config misbehave with a popular graphics driver. If it
 does, please notify them. The bug is on their side.</p>
 
 <h3>api-level (-l): Force your config to use a different API version.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -491,11 +487,10 @@ AwesomeWM will try to honor the behavior and content of the previous APIs.</p>
 newly deprecated API and enjoy cutting edge experimental features.</p>
 
 <p>The default API level matches the first component of the AwesomeWM version.
-For example, AwesomeWM v4.3 API level is "4". This only goes back to AwesomeWM
+For example, AwesomeWM v4.3 API level is &ldquo;4&rdquo;. This only goes back to AwesomeWM
 4.0. The older 3.x APIs have been removed.</p>
 
 <h3>screen (-m): Set the screen creation behavior.</h3>
-
 
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
@@ -529,7 +524,6 @@ controllable by Lua code.</p>
 
 <h3>replace (-r): Replace the current window manager with AwesomeWM.</h3>
 
-
 <table class='widget_list' border=1>
  <tr style='font-weight: bold;'>
   <th align='center'>Command line</th>
@@ -547,12 +541,99 @@ controllable by Lua code.</p>
 <p>If this option is set, AwesomeWM will kill the current window manager (even
 if it is another <a href="../core_components/awesome.html#">awesome</a> instance and replace it. This is disabled by default.</p>
 
-
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
+
+<script defer type="text/javascript">
+    // Theme selection and its local storage
+    var select = document.getElementById("theme-select");
+
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+        select.value = storedTheme;
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    }
+
+    select.addEventListener("change", function() {
+        var targetTheme = this.value;
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.setItem('theme', targetTheme);
+    });
+
+    const $nav = document.querySelector("#navigation");
+
+    // When clicking the sidebar, open it
+    $nav.addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768) {
+            return;
+        }
+
+        const target = $nav;
+        if (!target.classList.contains("open")) {
+            target.classList.add("open");
+            ev.stopPropagation();
+        }
+    });
+
+    // When clicking anywhere else than the sidebar, close it
+    document.querySelector("body").addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768 || ev.target.contains($nav)) {
+            return;
+        }
+
+        const target = $nav;
+        if (target.classList.contains("open")) {
+            target.classList.remove("open");
+        }
+    });
+
+    const copyResultClasses = {
+        success : "copy-link--success",
+        failure: "copy-link--failure"
+    };
+
+    const removeCopyResultClasses = ($target) =>
+        Object.values(copyResultClasses).forEach(c => $target.classList.remove(c));
+
+    document.querySelectorAll(".js-copy-link").forEach(copyLink => {
+        copyLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            const $target = e.target;
+
+            removeCopyResultClasses($target);
+
+            let link = $target.href;
+            if (!link) {
+                return;
+            }
+            if (link.startsWith("#")) {
+                const curr = window.location.pathname;
+                link = curr.substring(0, curr.indexOf("#")) + link;
+            }
+
+            // We need to create a fake element to copy the text from
+            const fakeElement = document.createElement("textarea");
+            fakeElement.value = link;
+            document.body.appendChild(fakeElement);
+            fakeElement.select();
+
+            let success = false;
+            try {
+                success = document.execCommand("copy");
+            } catch(err) {
+                success = false;
+            }
+
+            fakeElement.remove();
+            $target.classList.add(success ? copyResultClasses.success : copyResultClasses.failure);
+            setInterval(() => removeCopyResultClasses($target), 1500);
+        });
+    });
+</script>
+
 </body>
 </html>

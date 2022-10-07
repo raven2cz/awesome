@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Topic 01-readme.md - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -20,15 +21,8 @@
 <body>
 
 <div id="container">
-
-<div id="product">
-    <div id="product_logo"></div>
-    <div id="product_name"><big><b></b></big></div>
-    <div id="product_description"></div>
-</div> <!-- id="product" -->
-
-
 <div id="main">
+
 
 
 
@@ -36,8 +30,17 @@
 <!-- Menu -->
 
 <div id="navigation">
-<br/>
 <h1>awesome</h1>
+
+<div class="select">
+    <select name="theme" id="theme-select">
+       <option selected disabled>Choose a theme</option>
+       <option value="light">LDoc Light</option>
+       <option value="dark">Awesome Dark</option>
+       <option value="monokai">Monokai</option>
+       <option value="onedark">One Dark</option>
+    </select>
+ </div>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -223,8 +226,6 @@
   <li><a href="../classes/gears.matrix.html">gears.matrix</a></li>
   <li><a href="../classes/menubar.icon_theme.html">menubar.icon_theme</a></li>
   <li><a href="../classes/menubar.index_theme.html">menubar.index_theme</a></li>
-  <li><a href="../classes/signals.html">signals</a></li>
-  <li><a href="../classes/wibox.drawable.html">wibox.drawable</a></li>
   <li><a href="../classes/wibox.hierarchy.html">wibox.hierarchy</a></li>
   <li><a href="../classes/wibox.widget.base.html">wibox.widget.base</a></li>
   <li><a href="../classes/xproperties.html">xproperties</a></li>
@@ -234,19 +235,19 @@
 
 <div id="content">
 
-
-<h1>Readme</h1>
+    <h1>Readme</h1>
 
 <p><a name="About_Awesome"></a></p>
+
 <h2>About Awesome</h2>
 
 <p>Awesome is a highly configurable, next generation framework window manager for X.</p>
 
 <p><a name="Building_and_installation"></a></p>
+
 <h2>Building and installation</h2>
 
 <p>After extracting the dist tarball or cloning the repository, run:</p>
-
 
 <pre>
 make
@@ -257,14 +258,14 @@ sudo make install
 <p>This will</p>
 
 <ol>
-    <li>create a build directory at <code>./build</code>,</li>
-    <li>run <code>cmake</code>,</li>
-    <li>build Awesome and</li>
-    <li>install it to the default prefix path <code>/usr/local</code>.</li>
+<li>create a build directory at <code>./build</code>,</li>
+<li>run <code>cmake</code>,</li>
+<li>build Awesome and</li>
+<li>install it to the default prefix path <code>/usr/local</code>.</li>
 </ol>
 
-<p>Alternatively to the above, you can generate a <code>.deb</code> or <code>.rpm</code> package, for easy installation management:</p>
 
+<p>Alternatively to the above, you can generate a <code>.deb</code> or <code>.rpm</code> package, for easy installation management:</p>
 
 <pre>
 make <span class="global">package</span>
@@ -283,7 +284,6 @@ sudo rpm -Uvh awesome-x.y.z.rpm
 
 <h4>Arch Linux AUR</h4>
 
-
 <pre>
 sudo pacman -S <span class="comment">--needed base-devel git
 </span>git clone https://aur.archlinux.org/awesome-git.git
@@ -293,7 +293,6 @@ makepkg -fsri
 
 
 <h4>Debian-based</h4>
-
 
 <pre>
 sudo apt build-dep awesome
@@ -306,12 +305,12 @@ sudo apt install ./*.deb
 
 
 <p><a name="Running_Awesome"></a></p>
+
 <h2>Running Awesome</h2>
 
 <p>You can directly select Awesome from your display manager. If not, you can
 add the following line to your <code>.xinitrc</code> to start Awesome using <code>startx</code>
 or to <code>.xsession</code> to start Awesome using your display manager:</p>
-
 
 <pre>
 exec awesome
@@ -321,7 +320,6 @@ exec awesome
 <p>In order to connect Awesome to a specific display, make sure that
 the <code>DISPLAY</code> environment variable is set correctly, e.g.:</p>
 
-
 <pre>
 DISPLAY=foo.bar:<span class="number">1</span> exec awesome
 </pre>
@@ -330,6 +328,7 @@ DISPLAY=foo.bar:<span class="number">1</span> exec awesome
 <p>(This will start Awesome on display <code>:1</code> of the host foo.bar.)</p>
 
 <p><a name="Configuration"></a></p>
+
 <h2>Configuration</h2>
 
 <p>The configuration of Awesome is done by creating a
@@ -338,6 +337,7 @@ DISPLAY=foo.bar:<span class="number">1</span> exec awesome
 <p>An example configuration named <code>awesomerc.lua</code> is provided in the source.</p>
 
 <p><a name="Troubleshooting"></a></p>
+
 <h2>Troubleshooting</h2>
 
 <p>On most systems any message printed by Awesome (including warnings and errors)
@@ -351,7 +351,6 @@ problem.</p>
 
 <p>You can call <a href="../core_components/awesome.html#">awesome</a> with <code>gdb</code> like this:</p>
 
-
 <pre>
 DISPLAY=:<span class="number">2</span> gdb awesome
 </pre>
@@ -363,8 +362,8 @@ DISPLAY=:<span class="number">2</span> gdb awesome
  (gdb) run
 </code></pre>
 
-
 <p><a name="Asking_questions"></a></p>
+
 <h2>Asking questions</h2>
 
 <h4>IRC</h4>
@@ -374,38 +373,45 @@ DISPLAY=:<span class="number">2</span> gdb awesome
 <p><a href="https://webchat.oftc.net/?channels=awesome">IRC Webchat</a></p>
 
 <h4>Stack Overflow</h4>
+
 <p>You can ask questions on <a href="http://stackoverflow.com/questions/tagged/awesome-wm">Stack Overflow</a>.</p>
 
 <h4>Reddit</h4>
-<p>We also have a <a href="https://www.reddit.com/r/awesomewm/">awesome subreddit</a> where you can share your work and ask questions.</p>
+
+<p>We also have an <a href="https://www.reddit.com/r/awesomewm/">awesome subreddit</a> where you can share your work and ask questions.</p>
 
 <p><a name="Reporting_issues"></a></p>
+
 <h2>Reporting issues</h2>
 
 <p>Please report any issues you may find on <a href="https://github.com/awesomeWM/awesome/issues">our bugtracker</a>.</p>
 
 <p><a name="Contributing_code"></a></p>
+
 <h2>Contributing code</h2>
 
-<p>You can submit pull requests on the <a href="https://github.com/awesomeWM/awesome">github repository</a>.
+<p>You can submit pull requests on the <a href="https://github.com/awesomeWM/awesome">GitHub repository</a>.
 Please read the <a href="https://github.com/awesomeWM/awesome/blob/master/docs/02-contributing.md">contributing guide</a> for any coding, documentation or patch guidelines.</p>
 
 <p><a name="Status"></a></p>
+
 <h2>Status</h2>
-<p><a href="https://travis-ci.com/awesomeWM/awesome"><img src="https://travis-ci.com/awesomeWM/awesome.svg?branch=master" alt="Build Status"/></a></p>
+
+<p><a href="https://travis-ci.com/awesomeWM/awesome"><img src="https://travis-ci.com/awesomeWM/awesome.svg?branch=master" alt="Build Status" /></a></p>
 
 <p><a name="Documentation"></a></p>
+
 <h2>Documentation</h2>
 
 <p>Online documentation is available <a href="https://awesomewm.org/apidoc/">here</a>.</p>
 
 <p><a name="License"></a></p>
+
 <h2>License</h2>
 
 <p>The project is licensed under GNU General Public License v2 or later.
 You can read it online at (<a href="http://www.gnu.org/licenses/gpl-2.0.html">v2</a>
 or <a href="http://www.gnu.org/licenses/gpl.html">v3</a>).</p>
-
 
 </div> <!-- id="content" -->
 </div> <!-- id="main" -->
@@ -413,5 +419,93 @@ or <a href="http://www.gnu.org/licenses/gpl.html">v3</a>).</p>
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
+
+<script defer type="text/javascript">
+    // Theme selection and its local storage
+    var select = document.getElementById("theme-select");
+
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+        select.value = storedTheme;
+        document.documentElement.setAttribute('data-theme', storedTheme)
+    }
+
+    select.addEventListener("change", function() {
+        var targetTheme = this.value;
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.setItem('theme', targetTheme);
+    });
+
+    const $nav = document.querySelector("#navigation");
+
+    // When clicking the sidebar, open it
+    $nav.addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768) {
+            return;
+        }
+
+        const target = $nav;
+        if (!target.classList.contains("open")) {
+            target.classList.add("open");
+            ev.stopPropagation();
+        }
+    });
+
+    // When clicking anywhere else than the sidebar, close it
+    document.querySelector("body").addEventListener("click", function(ev) {
+        if (document.body.clientWidth >= 768 || ev.target.contains($nav)) {
+            return;
+        }
+
+        const target = $nav;
+        if (target.classList.contains("open")) {
+            target.classList.remove("open");
+        }
+    });
+
+    const copyResultClasses = {
+        success : "copy-link--success",
+        failure: "copy-link--failure"
+    };
+
+    const removeCopyResultClasses = ($target) =>
+        Object.values(copyResultClasses).forEach(c => $target.classList.remove(c));
+
+    document.querySelectorAll(".js-copy-link").forEach(copyLink => {
+        copyLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            const $target = e.target;
+
+            removeCopyResultClasses($target);
+
+            let link = $target.href;
+            if (!link) {
+                return;
+            }
+            if (link.startsWith("#")) {
+                const curr = window.location.pathname;
+                link = curr.substring(0, curr.indexOf("#")) + link;
+            }
+
+            // We need to create a fake element to copy the text from
+            const fakeElement = document.createElement("textarea");
+            fakeElement.value = link;
+            document.body.appendChild(fakeElement);
+            fakeElement.select();
+
+            let success = false;
+            try {
+                success = document.execCommand("copy");
+            } catch(err) {
+                success = false;
+            }
+
+            fakeElement.remove();
+            $target.classList.add(success ? copyResultClasses.success : copyResultClasses.failure);
+            setInterval(() => removeCopyResultClasses($target), 1500);
+        });
+    });
+</script>
+
 </body>
 </html>
