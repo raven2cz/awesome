@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Module awful.placement - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
-
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -693,7 +692,7 @@ f(client.focus)
     </span>
     </dt>
     <dd>
-    Move a drawable to the closest corner of the parent geometry (such as the
+    <p>Move a drawable to the closest corner of the parent geometry (such as the
  screen).</p>
 
 <p> Valid arguments include the common ones and:</p>
@@ -706,7 +705,10 @@ f(client.focus)
 <object class="img-object" data="../images/AUTOGEN_awful_placement_closest_mouse.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>Closest corner: top_left
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -772,12 +774,16 @@ f(client.focus)
     </span>
     </dt>
     <dd>
-    Place the client so no part of it will be outside the screen (workarea).</p>
+    <p>Place the client so no part of it will be outside the screen (workarea).</p>
 
 <object class="img-object" data="../images/AUTOGEN_awful_placement_no_offscreen.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>Before: x=-30, y=-30, width=100, height=100
+After:  x=50, y=50, width=100, height=100
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -2470,12 +2476,20 @@ source object from. The valid values are:
     </span>
     </dt>
     <dd>
-    Skip all preceding results of placement pipeline for fullscreen clients.</p>
+    <p>Skip all preceding results of placement pipeline for fullscreen clients.</p>
 
 <object class="img-object" data="../images/AUTOGEN_awful_placement_skip_fullscreen.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>no_offscreen:
+Before: x=0, y=0, width=320, height=240
+After:  x=10, y=10, width=320, height=240
+no_offscreen + skip_fullscreen:
+Before: x=0, y=0, width=320, height=240
+After:  x=0, y=0, width=320, height=240
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">

@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Coreclassmod tag - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
-
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -443,7 +442,22 @@ awful.key({ modkey, <span class="string">"Shift"</span>   }, <span class="string
  the documentation generation, you get the real signal name by
  removing the starting dot.</p>
 
-<p> <object class="img-object" data="../images/AUTOGEN_uml_nav_tables_tag.svg" alt="Usage example" type="image/svg+xml"></object></p></p>
+<p> <object class="img-object" data="../images/AUTOGEN_uml_nav_tables_tag.svg" alt="Usage example" type="image/svg+xml"></object></p>
+
+<h2> Core components relationship</h2>
+
+<p> <div class="components-relationship"><div class="components-relationship--diagrams">
+ <div class="components-relationship--diagram"><table class='widget_list' border=1><colgroup span="3"></colgroup><tr><th align='center' colspan=3 scope=colgroup>Acquire other objects from a tag</th></tr><tr style='font-weight: bold;'><th align='center'>Class</th><th align='center'></th><th align='center'>Property</th></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag1.svg"></td><td>t:clients()</td></tr>
+ <tr><td>screen</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag2.svg"></td><td>t.screen</td></tr>
+ </table></div>
+ <div class="components-relationship--diagram"><table class='widget_list' border=1><colgroup span="3"></colgroup><tr><th align='center' colspan=3 scope=colgroup>Acquire a tag from other objects</th></tr><tr style='font-weight: bold;'><th align='center'>Class</th><th align='center'></th><th align='center'>Property</th></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag3.svg"></td><td>c.tags</td></tr>
+ <tr><td>screen</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag4.svg"></td><td>s.tags</td></tr>
+ <tr><td>screen</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag5.svg"></td><td>s.selected_tag</td></tr>
+ <tr><td>screen</td><td><img src="../images/AUTOGEN_uml_nav_tables_tag6.svg"></td><td>s.selected_tags</td></tr>
+ </table></div>
+ </div><div class="components-relationship--legend"><b>Legend:</b> <i>c</i>: a client object, <i>t</i>: a tag object, <i>s</i>: a screen object, <i>k</i>: an awful.key object, <i>b</i>: a awful.button object,<i>n</i>: a naughty.notification object</div></div> <!-- .components-relationship --></p></p>
     <div class="extra-header">
 
 

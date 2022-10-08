@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Coreclassmod screen - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
-
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -257,6 +256,24 @@ awful.screen.connect_for_each_screen(<span class="keyword">function</span>(s)
  <a href="../core_components/client.html#screen">client.screen</a>, <a href="../popups_and_bars/wibox.html#screen">wibox.screen</a> and <a href="../core_components/tag.html#screen">tag.screen</a>.</p>
 
 <p> <object class="img-object" data="../images/AUTOGEN_uml_nav_tables_screen.svg" alt="Usage example" type="image/svg+xml"></object></p>
+
+<h2> Core components relationship</h2>
+
+<p> <div class="components-relationship"><div class="components-relationship--diagrams">
+ <div class="components-relationship--diagram"><table class='widget_list' border=1><colgroup span="3"></colgroup><tr><th align='center' colspan=3 scope=colgroup>Acquire other objects from a screen</th></tr><tr style='font-weight: bold;'><th align='center'>Class</th><th align='center'></th><th align='center'>Property</th></tr>
+ <tr><td>tag</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen1.svg"></td><td>s.tags</td></tr>
+ <tr><td>tag</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen2.svg"></td><td>s.selected_tag</td></tr>
+ <tr><td>tag</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen3.svg"></td><td>s.selected_tags</td></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen4.svg"></td><td>s.clients</td></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen5.svg"></td><td>s.hidden_clients</td></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen6.svg"></td><td>s.tiled_clients</td></tr>
+ </table></div>
+ <div class="components-relationship--diagram"><table class='widget_list' border=1><colgroup span="3"></colgroup><tr><th align='center' colspan=3 scope=colgroup>Acquire a screen from other objects</th></tr><tr style='font-weight: bold;'><th align='center'>Class</th><th align='center'></th><th align='center'>Property</th></tr>
+ <tr><td>tag</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen7.svg"></td><td>t.screen</td></tr>
+ <tr><td>client</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen8.svg"></td><td>c.screen</td></tr>
+ <tr><td>naughty.notification</td><td><img src="../images/AUTOGEN_uml_nav_tables_screen9.svg"></td><td>n.screen</td></tr>
+ </table></div>
+ </div><div class="components-relationship--legend"><b>Legend:</b> <i>c</i>: a client object, <i>t</i>: a tag object, <i>s</i>: a screen object, <i>k</i>: an awful.key object, <i>b</i>: a awful.button object,<i>n</i>: a naughty.notification object</div></div> <!-- .components-relationship --></p>
     <div class="extra-header">
 
 

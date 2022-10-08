@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Layoutmod wibox.layout.grid - awesome API documentation</title>
     <link rel="stylesheet" href="../ldoc.css" type="text/css" />
-
    <script>
      function show_extra(id) {
         var cur = document.getElementById("item"+id).className
@@ -1122,14 +1121,24 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Set the preferred orientation of the grid layout.</p>
+    <p>Set the preferred orientation of the grid layout.</p>
 
 <p> When calling <a href="../widget_layouts/wibox.layout.grid.html#get_next_empty">get_next_empty</a>, empty cells are browsed differently.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_orientation.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l = wibox.layout {
+    forced_num_cols = 2,
+    forced_num_rows = 2,
+    homogeneous     = true,
+    layout = wibox.layout.grid
+}
+l:set_orientation("vertical") -- change to "horizontal"
+l:add(...)
+</code></pre>
 
     <h3>Constraints:</h3>
     <span class="property_type">
@@ -2651,12 +2660,15 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Add a widget to the grid layout at specific coordinate.</p>
+    <p>Add a widget to the grid layout at specific coordinate.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_add.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l:add_widget_at(new, 1, 4, 1, 1)
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -2768,12 +2780,15 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Remove widgets at the coordinates.</p>
+    <p>Remove widgets at the coordinates.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_remove.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l:remove_widgets_at(1,1)
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -2990,12 +3005,15 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Insert column at index.</p>
+    <p>Insert column at index.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_insert_column.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l:insert_column(2)
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -3036,12 +3054,15 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Extend column at index.</p>
+    <p>Extend column at index.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_extend_column.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l:extend_column(2)
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
@@ -3082,12 +3103,15 @@ l:add_widget_at(lorem, <span class="number">1</span>, <span class="number">1</sp
     </span>
     </dt>
     <dd>
-    Remove column at index.</p>
+    <p>Remove column at index.</p>
 
 <object class="img-object" data="../images/AUTOGEN_wibox_layout_grid_remove_column.svg" alt="Usage example" type="image/svg+xml"></object>
 
 
-<p><strong>Usage example output</strong>:
+<p><strong>Usage example output</strong>:</p>
+
+<pre><code>l:remove_column(2)
+</code></pre>
 
     <h3>Parameters:</h3>
     <table class="see_also">
